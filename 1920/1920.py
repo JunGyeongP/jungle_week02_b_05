@@ -12,19 +12,18 @@ M_list = list(map(int, input().split()))
 def binary_search(arr, target):
     start = 0
     end = len(arr)-1
-    mid = (start+end)//2
+
     while start <= end:
+        mid = (start+end)//2
         if target == arr[mid]:
-            print(1)
-            break
+            return 1
         elif target > arr[mid]:
-            mid = (mid+end)//2
-        elif target < arr[mid]:
-            mid = (start+mid)//2
+            start = mid + 1
         else:
-            print(0)
+            end = mid - 1
+    return 0
 
 
 N_list.sort()
 for i in M_list:
-    binary_search(N_list, i)
+    print(binary_search(N_list, i))
