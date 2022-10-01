@@ -1,5 +1,1 @@
-5
-push 12354
-pop
-front
-back
+2
