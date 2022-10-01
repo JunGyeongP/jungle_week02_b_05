@@ -5,7 +5,6 @@ N, K = map(int, sys.stdin.readline().strip().split())
 num_list = deque([])
 for i in range(N):
     num_list.append(i+1)
-print(num_list)
 result_arr = []
 while(len(result_arr) < N):
     cnt = 1
