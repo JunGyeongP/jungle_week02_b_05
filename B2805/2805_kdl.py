@@ -8,17 +8,17 @@ N_list = list(map(int, input().split()))
 def bin_search(arr, target):
     min_ = 1
     max_ = max(arr)
-    while min_ <= max_:
+    while min_ < max_:
         V_sum = 0
         mid = (min_+max_) // 2
         for i in arr:
             if i > mid:
                 V_sum += i - mid
-        if V_sum < target:
-            max_ = mid - 1
+        if V_sum >= target:
+            max_ = mid-1
         else:
-            min_ = mid + 1
-    return max_
+            min_ = mid
+    return min_
 
 
 print(bin_search(N_list, M))
