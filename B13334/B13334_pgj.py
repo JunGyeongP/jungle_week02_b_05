@@ -14,7 +14,6 @@ for i in range(n):
         list.append((h,a))
 d = int(sys.stdin.readline())
 list.sort(key=lambda x: (x[1], x[0]))
-print(list)
 
 for i in range(len(list)):
     rp = list[i][1]
@@ -34,3 +33,5 @@ for i in range(len(list)):
             heapq.heappop(heap)
 
     maxi = max(maxi, len(heap))
+
+print(maxi)
