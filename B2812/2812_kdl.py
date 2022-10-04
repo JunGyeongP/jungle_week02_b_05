@@ -4,16 +4,17 @@ input = sys.stdin.readline
 
 N, K = map(int, input().split())
 numbers = list(input())
+del_num = K
 stk = []
 
+
 for i in range(len(numbers)):
-    n = len(stk)
-    while K > 0 and stk:
+    while del_num > 0 and stk:
         if stk[-1] < numbers[i]:
             stk.pop()
-            K -= 1
+            del_num -= 1
         elif stk[-1] >= numbers[i]:
             break
     stk.append(numbers[i])
 
-print(''.join(stk))
+print(''.join(stk[:N-K]))
