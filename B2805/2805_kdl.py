@@ -15,9 +15,9 @@ def bin_search(arr, target):
             if i > mid:
                 V_sum += i - mid
         if V_sum < target:
-            max_ = mid - 1
+            max_ = mid-1
         else:
-            min_ = mid + 1
+            min_ = mid+1
     return max_
 
 

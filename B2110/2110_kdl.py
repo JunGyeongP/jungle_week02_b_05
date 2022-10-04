@@ -8,10 +8,8 @@ def bin_search():
     house = [int(input()) for _ in range(N)]
     house.sort()
 
-    result = 0
     minV = 1
     maxV = house[N-1] - house[0]
-
     if N == 2:
         return maxV
     else:
@@ -26,9 +24,9 @@ def bin_search():
             if cnt < C:
                 maxV = midV-1
             else:
-                result = midV
                 minV = midV+1
-    return result
+
+    return maxV
 
 
 print(bin_search())

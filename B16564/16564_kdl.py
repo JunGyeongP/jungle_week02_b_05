@@ -17,8 +17,6 @@ while minV <= maxV:
             break
         else:
             tmp += midV - i
-    if K == tmp:
-        print(midV)
     if K >= tmp:
         minV = midV + 1
         res = midV
