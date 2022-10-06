@@ -19,8 +19,7 @@ while minV <= maxV:
             tmp += midV - i
     if K >= tmp:
         minV = midV + 1
-        res = midV
     else:
         maxV = midV - 1
 
-print(res)
+print(maxV)
